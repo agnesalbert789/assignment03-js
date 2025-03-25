@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Italian Pizzeria</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="images/logo.jpg" alt="Pizza Logo">
+    </div>
+    <h1>Welcome to Italian Pizzeria</h1>
+</header>
+
+<main>
+    <div class="order-container">
+        <form id="pizzaForm">
+            <label for="size">Choose Size:</label>
+            <select id="size" required>
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+                <option value="Extra Large">Extra Large</option>
+            </select>
+
+            <label>Choose Toppings:</label>
+            <div class="toppings">
+                <div class="topping-item">
+                    <input type="checkbox" id="pepperoni" value="Pepperoni">
+                    <label for="pepperoni">Pepperoni</label>
+                </div>
+                <div class="topping-item">
+                    <input type="checkbox" id="mushrooms" value="Mushrooms">
+                    <label for="mushrooms">Mushrooms</label>
+                </div>
+                <div class="topping-item">
+                    <input type="checkbox" id="olives" value="Olives">
+                    <label for="olives">Olives</label>
+                </div>
+                <div class="topping-item">
+                    <input type="checkbox" id="onions" value="Onions">
+                    <label for="onions">Onions</label>
+                </div>
+                <div class="topping-item">
+                    <input type="checkbox" id="extra-cheese" value="Extra Cheese">
+                    <label for="extra-cheese">Extra Cheese</label>
+                </div>
+                <div class="topping-item">
+                    <input type="checkbox" id="chicken" value="Chicken">
+                    <label for="chicken">Chicken</label>
+                </div>
+                <div class="topping-item">
+                    <input type="checkbox" id="pineapple" value="Pineapple">
+                    <label for="pineapple">Pineapple</label>
+                </div>
+            </div>
+
+            <label for="crust">Choose Crust Type:</label>
+            <select id="crust" required>
+                <option value="Thin Crust">Thin Crust</option>
+                <option value="Thick Crust">Thick Crust</option>
+                <option value="Stuffed Crust">Stuffed Crust</option>
+                <option value="Cheese Burst">Cheese Burst</option>
+                <option value="Garlic Butter Crust">Garlic Butter Crust</option>
+            </select>
+
+            <label>Choose Sides:</label>
+            <div class="sides">
+                <div class="side-item">
+                    <input type="checkbox" id="garlic-bread" value="Garlic Bread">
+                    <label for="garlic-bread">Garlic Bread</label>
+                </div>
+                <div class="side-item">
+                    <input type="checkbox" id="chicken-wings" value="Chicken Wings">
+                    <label for="chicken-wings">Chicken Wings</label>
+                </div>
+                <div class="side-item">
+                    <input type="checkbox" id="soda" value="Soda">
+                    <label for="soda">Soda</label>
+                </div>
+                <div class="side-item">
+                    <input type="checkbox" id="cheese-sticks" value="Cheese Sticks">
+                    <label for="cheese-sticks">Cheese Sticks</label>
+                </div>
+            </div>
+
+            <label>Delivery Option:</label>
+            <div class="delivery-options">
+                <input type="radio" id="pickup" name="delivery" value="Pickup" checked>
+                <label for="pickup">Pickup</label>
+                <input type="radio" id="delivery" name="delivery" value="Delivery">
+                <label for="delivery">Delivery</label>
+            </div>
+
+            <div id="addressSection" style="display: none;">
+                <label for="address">Delivery Address:</label>
+                <input type="text" id="address" placeholder="Enter your address">
+            </div>
+            <!-- Order Placed Popup -->
+            <div id="orderPopup" class="order-placed-popup">
+                <div class="order-placed-popup-content">
+                    <span id="closeOrderPlacedPopup">&times;</span>
+                    <h2>Order Placed!</h2>
+                    <p id="orderSummaryText"></p>
+                </div>
+            </div>
+            <label for="specialPizza">Order a Special Pizza (Non-customizable):</label>
+            <select id="specialPizza">
+                <option value="None">None</option>
+                <option value="Margherita">Margherita</option>
+                <option value="Pepperoni Supreme">Pepperoni Supreme</option>
+                <option value="Vegetarian Delight">Vegetarian Delight</option>
+            </select>
+
+            <button type="submit">Place Order</button>
+        </form>
+
+        <div id="orderSummary"></div>
+    </div>
+
+    <div class="pizza-images">
+        <h3>Our Special Pizzas</h3>
+        <div class="special-pizza">
+            <img src="images/download%20(10).jpg" alt="Margherita Pizza">
+            <p>Margherita</p>
+        </div>
+        <div class="special-pizza">
+            <img src="images/download%20(11).jpg" alt="Pepperoni Supreme">
+            <p>Pepperoni Supreme</p>
+        </div>
+        <div class="special-pizza">
+            <img src="images/How%20To%20Make%20A%20Homemade%20Pizza%20Recipe%20at%20Kaysutton.jpg" alt="Vegetarian Delight">
+            <p>Vegetarian Delight</p>
+        </div>
+    </div>
+
+</main>
+
+<div id="orderDetailsContainer"></div>
+
+<footer>
+    <p>Created by <span id="studentName"></span> | Student ID: <span id="studentId"></span></p>
+</footer>
+
+</body>
+</html>
